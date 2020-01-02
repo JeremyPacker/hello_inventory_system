@@ -1,11 +1,11 @@
 <template>
   <div>
+    <button v-on:click="sendMail()">Send</button>
     <b-table striped hover :items="showRecords" :fields="titles">
       <template v-slot:cell(actions)="data">
         <b-form-input type="number" min="0.00" v-model="records.find(x => x.uid == showRecords[data.index].uid).needed"></b-form-input>
       </template>
     </b-table>
-    <button v-on:click="sendMail()">Send</button>
   </div>
 </template>
 
