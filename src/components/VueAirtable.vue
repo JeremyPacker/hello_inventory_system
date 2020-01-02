@@ -95,7 +95,7 @@ export default {
         mailBody += `%0D%0AItem: ${item.item}%0D%0ACategory: ${item.category}%0D%0AQuantity: ${item.quantity}%0D%0ANeeded: ${item.needed}%0D%0A%0D%0A`
       }
       mailBody += `Notes:%0D%0A`
-      window.open(`mailto:test@example.com?subject=subject&body=${mailBody}`);
+      window.open(`mailto:jadermelt@gmail.com?subject=Hello_Inventory_Needs&body=${mailBody}`);
     }
   }
 }
