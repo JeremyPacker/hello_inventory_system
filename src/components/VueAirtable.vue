@@ -79,7 +79,6 @@ export default {
         console.log(this.records);
       });
     },
-
     sendMail () {
       const itemsToSend = this.records.filter((item) => {
         if (item.needed !== 0 && item.needed !== '0' && item.needed !== '') {
