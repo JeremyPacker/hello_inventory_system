@@ -95,7 +95,11 @@ export default {
         //mailBody += `%0D%0AItem: ${item.item}%0D%0ANeeded: ${item.needed}%0D%0A%0D%0A`
       }
       mailBody += `Notes:%0D%0A`
-      window.open(`mailto:jadermelt@gmail.com?subject=Hello_Inventory_Needs&body=${mailBody}`);
+
+      var r = confirm(mailBody);
+      if (r == true) {
+        window.open(`mailto:jadermelt@gmail.com?subject=Hello_Inventory_Needs&body=${mailBody}`);
+      }
     }
   }
 }
