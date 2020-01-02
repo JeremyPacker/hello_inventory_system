@@ -96,7 +96,7 @@ export default {
       }
       mailBody += `Notes:%0D%0A`
 
-      var r = confirm(mailBody);
+      var r = confirm('Are you ready to send the inventory list to management?');
       if (r == true) {
         window.open(`mailto:jadermelt@gmail.com?subject=Hello_Inventory_Needs&body=${mailBody}`);
       }
