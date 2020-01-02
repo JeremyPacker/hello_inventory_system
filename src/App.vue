@@ -6,7 +6,6 @@
       <option id="test" value="" selected disabled>Show Category</option>
       <option v-for="category in categories" :filter="selectedCategory" :value="category" :key="category.id">{{ category }}</option>
     </select></p>
-  <!--  <p><span id="i"><i>Showing all {{ selectedCategory  }} products</i></span></p> -->
     </div>
     <vue-airtable :base="base" :titles="titles" :filter="filter" :selectedCategory="selectedCategory"></vue-airtable>
     <div id="footer">Developed by <a href="https://www.linkedin.com/in/jeremy-packer-b8411848">Jeremy Packer</a> of <a href="https://www.packerlabs.com">Packer Labs, LLC</a></div>
