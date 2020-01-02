@@ -89,13 +89,13 @@ export default {
         }
       })
 
-      var mailBody += `%0D%0AList:%0D%0A`
-
+      var mailBody = 'List:%0D%0A'
       for (var i = 0; i < itemsToSend.length; i++) {
         const item = itemsToSend[i]
-        mailBody += `%0D%0AItem: ${item.item}%0D%0ACategory: ${item.category}%0D%0AQuantity: ${item.quantity}%0D%0ANeeded: ${item.needed}%0D%0A%0D%0A`
-      //  mailBody += `%0D%0AItem: ${item.item}%0D%0ANeeded: ${item.needed}%0D%0A%0D%0A`
+        //mailBody += `%0D%0AItem: ${item.item}%0D%0ACategory: ${item.category}%0D%0AQuantity: ${item.quantity}%0D%0ANeeded: ${item.needed}%0D%0A%0D%0A`
+        mailBody += `%0D%0AItem: ${item.item}%0D%0ANeeded: ${item.needed}%0D%0A%0D%0A`
       }
+      mailBody += `Notes:%0D%0A`
       window.open(`mailto:jadermelt@gmail.com?subject=Hello_Inventory_Needs&body=${mailBody}`);
     }
   }
